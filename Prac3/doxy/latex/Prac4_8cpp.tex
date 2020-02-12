@@ -1,0 +1,48 @@
+\hypertarget{Prac4_8cpp}{}\section{Prac4.\+cpp File Reference}
+\label{Prac4_8cpp}\index{Prac4.\+cpp@{Prac4.\+cpp}}
+{\ttfamily \#include \char`\"{}Prac4.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Prac4_8cpp_ab43971159bedc8576304b4ec1c4567dc}{Master} ()
+\item 
+void \hyperlink{Prac4_8cpp_a3cdafe41bdc98a25ea63a3697c1edc84}{Slave} (int ID)
+\item 
+int \hyperlink{Prac4_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Prac4.\+cpp@{Prac4.\+cpp}!main@{main}}
+\index{main@{main}!Prac4.\+cpp@{Prac4.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{Prac4_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{Prac4_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+This is the entry point to the program. \index{Prac4.\+cpp@{Prac4.\+cpp}!Master@{Master}}
+\index{Master@{Master}!Prac4.\+cpp@{Prac4.\+cpp}}
+\subsubsection[{\texorpdfstring{Master()}{Master()}}]{\setlength{\rightskip}{0pt plus 5cm}void Master (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Prac4_8cpp_ab43971159bedc8576304b4ec1c4567dc}{}\label{Prac4_8cpp_ab43971159bedc8576304b4ec1c4567dc}
+This is the master node function, describing the operations that the master will be doing \paragraph*{Local vars}
+
+j\+: Loop counter
+
+buff\+: Buffer for transferring message data
+
+stat\+: Status of the M\+PI application
+
+\paragraph*{Output}
+
+The file Output.\+jpg will be created on success to save the processed output. \index{Prac4.\+cpp@{Prac4.\+cpp}!Slave@{Slave}}
+\index{Slave@{Slave}!Prac4.\+cpp@{Prac4.\+cpp}}
+\subsubsection[{\texorpdfstring{Slave(int I\+D)}{Slave(int ID)}}]{\setlength{\rightskip}{0pt plus 5cm}void Slave (
+\begin{DoxyParamCaption}
+\item[{int}]{ID}
+\end{DoxyParamCaption}
+)}\hypertarget{Prac4_8cpp_a3cdafe41bdc98a25ea63a3697c1edc84}{}\label{Prac4_8cpp_a3cdafe41bdc98a25ea63a3697c1edc84}
+This is the Slave function, the workers of this M\+PI application. 
