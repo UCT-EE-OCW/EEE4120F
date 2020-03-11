@@ -8,3 +8,6 @@ Investigate how heterogenous computing can effect measured wall clock time, and 
 
 ## Prac 3: MPI
 Learn about distributed memory programming models by applying filters to images.
+
+## Prac 4: FPGA Wall clock
+An introduction to reconfigurable hardware. Students create a wall clock on a Nexys board (Nexys 4 DDR or Nexys A7 suggested).
