@@ -22,7 +22,7 @@ all:    clean Prac3 run
 clean:
 	rm -f -r $(PROG) $(OBJS)
 
-Prac4:
+Prac3:
 	$(CC) $(INCLUDE) -c Prac3.cpp -o obj/Prac3.o
 	$(CC) $(INCLUDE) -c Tools/JPEG.cpp -o obj/JPEG.o
 	$(CC) $(INCLUDE) -c Tools/Timer.cpp -o obj/Timer.o
