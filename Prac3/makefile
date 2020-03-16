@@ -17,24 +17,22 @@ LDLIBS  = -L/usr/lib/openmpi/lib -L/usr/lib -lm -ljpeg -lmpi
 INCLUDE = -ITools -I/usr/lib/openmpi/include
 
 .PHONY: clean Prac3 run
-all:    mkdir -p $(PROG) $(OBJS)
-	clean Prac3 run
+
+all: clean Prac3 run
 
 clean:
 	rm -f -r $(PROG) $(OBJS)
 
 Prac3:
-	mkdir -p $(PROG) $(OBJS)
+	mkdir -p bin/ obj/
 	$(CC) $(INCLUDE) -c Prac3.cpp -o obj/Prac3.o
 	$(CC) $(INCLUDE) -c Tools/JPEG.cpp -o obj/JPEG.o
 	$(CC) $(INCLUDE) -c Tools/Timer.cpp -o obj/Timer.o
 	$(CC) -o bin/Prac3 obj/Prac3.o obj/JPEG.o obj/Timer.o $(LDLIBS)
 
-# you can type "make run" to execute the program in this case with a default of 5 nodes
+# you can type "make run" to execute the program in this case with a default of 4 nodes
 run:
-	mkdir -p $(PROG) $(OBJS)
-	mpirun -np 5 bin/Prac3
+	mpirun -np 4 bin/Prac3
 
 doxy: Prac3.cpp
 	doxygen Prac3.doxy
-
