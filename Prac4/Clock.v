@@ -22,7 +22,7 @@ module WallClock(
     	reg [3:0]hours1=4'd0;
 	reg [3:0]hours2=4'd0;
 	reg [3:0]mins1=4'd0;
-	reg [3:0]mins1=4'd0;
+	reg [3:0]mins2=4'd0;
     
 	//Initialize seven segment
 	// You will need to change some signals depending on you constraints
