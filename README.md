@@ -11,3 +11,6 @@ Learn about distributed memory programming models by applying filters to images.
 
 ## Prac 4: FPGA Wall clock
 An introduction to reconfigurable hardware. Students create a wall clock on a Nexys board (Nexys 4 DDR or Nexys A7 suggested).
+
+## Prac 5 - Vivado IP and Resource Usage
+Using a full sine wave look up table and a quarter sinewave look up table, compare and contrast resources used (including time) to create a simple arpeggiator. 
