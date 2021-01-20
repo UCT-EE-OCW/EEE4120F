@@ -1,0 +1,71 @@
+\section{Prac 3 - MPI}
+\label{sec:Prac3}
+\subsection{Overview}
+The focus of this practical is message-passing in a distributed memory programming model. The processing algorithm is a median filter will be used. You can find a tutorial at \href{https://computing.llnl.gov/tutorials/mpi/}{https://computing.llnl.gov/tutorials/mpi/}, but this is much more detailed that what you need for this practical.
+
+\subsection{The Programming Model}
+One thing to keep in mind is that each process runs in a completely separate memory-space.
+There are no shared memory structures, so any global memory you define is local to each
+instance. The only means of sharing data is through sending and receiving messages.
+Typically MPI is only useful on distributed systems (systems where each node has its own
+memory, and the nodes are connected through some form of network – typically Ethernet).
+Setting up such a system is not trivial, and therefore not included in this practical. For this
+practical, all the processes will be running on the same CPU, with memory being separated
+by means of memory virtualisation (through use of the \href{https://en.wikipedia.org/wiki/Memory_management_unit}{memory management unit}).
+
+\subsubsection{MPI Commands}
+MPI programs are compiled with \textbf{mpic}, not gcc, and run with \textbf{mpirun}, not by calling the program binary directly. The makefile associated with this practical runs the program with 5 instances (one master and 4 slaves). Feel free to change this if you so wish. 
+
+Study the source code provided. It has been adapted from \href{https://en.wikipedia.org/wiki/Message_Passing_Interface#Example_program}{this example} and uses simple blocking communication. You can implement this practical by means of blocking communication, so you don’t need any more commands than those in the example code. 
+
+If you feel like being fancy, have a look at the \href{https://mpi.deino.net/mpi_functions/MPI_Iprobe.html}{MPI Iprobe} command. 
+
+You can also have a look at \href{http://stackoverflow.com/questions/12637550/using-mpibyte-to-receive-any-data-type}{this link} to see how to tag your messages. Tags are typically used to determine the message type before actually receiving it, but it could be used for many other things as well. 
+
+There are many MPI datatypes, but for the purpose of this practical you can get away with using bytes (MPI BYTE) exclusively.
+
+\subsection{Problems}
+\subsubsection{Problem Partitioning}
+Choose a memory partitioning scheme. In your report, explain your partitioning scheme and why you chose it. Do not send the entire dataset to each process, as this is a waste of data. \textbf{[5 marks for describing the partitioning]}
+
+You also need to have some means to indicate to the slave what size the data is. You can implement this any way you wish, but it is suggested that you send one message, with a known size and fixed format, that indicates data size and any other parameters you wish to send to the slave. The next message can then be the actual data to work on. \textbf{[5 marks for getting data to slaves]}
+
+When the slave is finished, it must send the result back to the master. The master must then assemble the results and save the resulting filtered image to disk. \textbf{[5 marks sending back the data and reassembling]}
+
+Provide snippets of your code in the report (it is important for your code snippets to be suitable commented, the use of comments in your main code repository is not as important for marking but is good practice). \textbf{[5 marks for code]}
+
+\subsubsection{Experimentation}
+Feel free to experiment with different number of processes, although this is not required. It is sufficient to simply get it working. \textbf{[5 marks for experiments]}
+
+Your report should comment on the time performance though, so make sure you take time measurements. \textbf{[5 marks graphs and display of results]}
+
+\subsection{Submission}
+
+Compile your experiments and findings into an IEEE-style conference paper. 
+The page limit is 3 pages. Submit your paper to the Vula Assignment for this practical.
+
+\subsection{Marking}
+Note that 33 marks are available, but you cannot score more than a total of 100\%.
+\begin{table}[H]
+\centering
+\caption{Prac 3 Marking Guide}
+\label{tbl:Prac3Marks}
+\begin{tabular}{|l|l|r|}
+\hline
+\textbf{Aspect} & \textbf{Description} & \multicolumn{1}{l|}{\textbf{Mark Allocation}} \\ \hline
+Partitioning & Listing (show data split) & 2 \\ \hline
+ & Explanation & 3 \\ \hline
+To Slaves & Listing \& ACK & 2 \\ \hline
+ & Explanation & 3 \\ \hline
+On/From Slaves & Listing & 3 \\ \hline
+Reassembling & Explanation & 2 \\ \hline
+Code & Comments & 2 \\ \hline
+ & Use of MPI principles & 3 \\ \hline
+Experiments & Experiment & 3 \\ \hline
+ & Good practice & 2 \\ \hline
+Results & Graph/Table & 2 \\ \hline
+ & Discussion & 3 \\ \hline
+Bonus &  & 3 \\ \hline
+\textbf{Total} &  & \textbf{30} \\ \hline
+\end{tabular}
+\end{table}

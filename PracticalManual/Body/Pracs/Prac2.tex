@@ -1,0 +1,74 @@
+\newpage
+\section{Prac 2 - OpenCL}
+\label{sec:Prac2}
+
+\subsection{Introduction}
+\begin{quote}
+    OpenCL™ (Open Computing Language) is the open, royalty-free standard for cross-platform, parallel programming of diverse processors found in personal computers, servers, mobile devices and embedded platforms. OpenCL greatly improves the speed and responsiveness of a wide spectrum of applications in numerous market categories including gaming and entertainment titles, scientific and medical software, professional creative tools, vision processing, and neural network training and inferencing. \cite{opencl_khronos}
+\end{quote}
+
+The focus of this practical is investigating the performance metrics of an OpenCL matrix multiplication implementation.
+
+\subsection{Requirements}
+The Blue Lab PCs have all the required packages installed, but if you wish to run this practical on your own machine, you will need to install OpenCL as per the instructions on the Wiki - \href{http://wiki.ee.uct.ac.za/OpenCL}{http://wiki.ee.uct.ac.za/OpenCL}.
+
+\subsection{The Programming Model}
+OpenCL uses a programming and memory model similar to OpenGL. The CPU must copy data to the GPU and then tell a kernel (OpenCL worker) to process the data. When the kernel is finished, the CPU can read back the result. Download and inspect the practical source code (available from Vula resources).
+
+Familiarise yourself with the program and what the OpenCL wrapper is actually doing. 
+
+If you modify the code, be very careful with how you allocate and free memory. You need to allocate CPU and GPU memory separately, and then free them separately as well.
+
+The local group size has to be an integer fraction of the global group size, in every dimension. Every time you change N, you have to recalculate the local group size. 
+
+\subsection{Tasks}
+\subsubsection{Speed-up}
+The default program multiplies two 3x3 matrices. This process takes much longer on the GPU than the CPU, mainly due to overhead. At what matrix size does it become worth while to use the GPU instead of the CPU? Support your argument with measured results (presented in graphs and\/or tables). You may also, for instance, make assumptions regarding speed-up expected were the CPU version multi-threaded.
+
+\subsubsection{Data Transfer Overhead}
+The asynchronous nature of the OpenCL interface makes it difficult to obtain accurate timing information of the various steps of the process. Try to come up with a way to measure the data transfer overhead and processing time separately (hint: make use of the clFinish function\footnote{Which can be found in the Process\_OpenCL() function in the OpenCL\_Wrapper.c} in the OpenCL WriteData and OpenCL ReadData functions).
+
+Use this new information to comment on the sources of OpenCL processing delay. Also comment on the speed-up factor achieved when transfer overhead is not taken into account. Does this relate well to the number of threads that are running on the GPU? If not, provide an argument for why this is the case. Do this for large N (pick a value that takes long enough to dominate the transfer overhead, but does not let you finish a whole coffee between runs).
+
+\subsection{Submission}
+Compile your experiments and findings into an IEEE-style conference paper. Make sure you include ALL hardware details, including GPU and CPU clock rates, if available. Of particular importance is the local work group size and number of compute units.
+
+The page limit is 3 pages. Submit your paper to the Vula Assignment for this practical.
+
+\subsection{Marks}
+% Marks are awarded accordingly:
+% \begin{itemize}
+%     \item Report Structure [6]\\
+%     Intro (3); Latex/Format (1); Headings etc (1); Captions (1) 
+%     \item Golden Measure\\
+%     Code concepts (3); Neatness/structure(3); Edge cases (2)
+%     \item Sequential comparisons\\
+%     Appropriate listings (1); Table (1); Graph (1)
+%     \item Parallel\\
+%     Description/Concepts (4); Code quality (2); Crit Section disc. (1); Table (2); Graph (1); Discussion (3)
+%     \item Bonus [3]\\
+%     Bonus marks are available for extra investigative work, if it is deemed of suitable quality. Note that you still cannot get more than  100\%
+%     \item Negative marking\\
+%     Marks will be removed for no/bad references, bad report writing, incorrect formatting, not using \LaTeX{}
+% \end{itemize}
+Note that 33 marks are available, but you will still cannot score a mark above 100\%.
+\begin{table}[H]
+\centering
+\caption{Prac 2 Marking Guide}
+\label{tbl:Prac2Marks}
+\begin{tabular}{|l|l|r|}
+\hline
+\textbf{Aspect} & \textbf{Description} & \multicolumn{1}{l|}{\textbf{Mark Allocation}} \\ \hline
+P1 & Graphs/Tables * & 6 \\ \hline
+ & Comparison to CPU Speed up & 3 \\ \hline
+P2 & 3 Metrics reported on & 4 \\ \hline
+ & Use of clFinish in Code & 2 \\ \hline
+ & Overhead discussion & 3 \\ \hline
+ & Discussion & 4 \\ \hline
+General & Introduction & 3 \\ \hline
+ & Layout/Captions etc & 3 \\ \hline
+ & PC details & 2 \\ \hline
+Bonus experiments &  & 3 \\ \hline
+TOTAL &  & 30 \\ \hline
+\end{tabular}
+\end{table}
