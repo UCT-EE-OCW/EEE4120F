@@ -16,3 +16,9 @@ An introduction to reconfigurable hardware. Students create a wall clock on a Ne
 
 ## Prac 5: Vivado IP and Resource Usage
 Using a full sine wave look up table and a quarter sinewave look up table, compare and contrast resources used (including time) to create a simple arpeggiator. 
+
+## PracticalManual
+Contains latex source code for the pracical manual.
+
+## YODAProject
+Contains latex source code for YODA Project manual.
