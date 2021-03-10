@@ -18,11 +18,11 @@ Learn about using Xilinx Vivado, it's simulator and intergrating an IP core into
 
 _Students choose to complete either Prac 5a or Prac 5b_
 
-## Prac 5a: Advanced Module Design and Simulation Techniques using Xilinx Vivado (under dev)
+## Prac 5a: Advanced Module Design and Simulation  using Xilinx Vivado (under dev)
 More advanced use of Xilinx Vivado and simulation techniques using this tool.
 
 ## Prac 5b: FPGA intro using the Digilent Nexys platform (under dev)
-More advanced use of Xilinx Vivado and simulation techniques using this tool.
+Getting started with using Vivado to configure a HDL design for the Nexys board and generate, deploy and test a bitfile.
 
 _Other resources_
 
