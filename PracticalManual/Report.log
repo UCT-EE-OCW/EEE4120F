@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.20)  17 APR 2021 17:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.20)  17 APR 2021 17:52
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -544,27 +544,31 @@ l.8 \include{Body/Introduction}
 ]
 \openout2 = `Body/PracOverview.aux'.
 
- (Body/PracOverview.tex) [2
+ (Body/PracOverview.tex
+
+LaTeX Warning: Hyper reference `sec:Prac6' on page 2 undefined on input line 20
+.
+
+) [2
 
 
 ]
 \openout2 = `Body/Pracs/Prac1.aux'.
 
-
-(Body/Pracs/Prac1.tex [3
+ (Body/Pracs/Prac1.tex [3
 
 
 ] [4]
-<Figures/octave_hist.png, id=261, 423.08063pt x 394.47375pt>
+<Figures/octave_hist.png, id=263, 423.08063pt x 394.47375pt>
 File: Figures/octave_hist.png Graphic file (type png)
 <use Figures/octave_hist.png>
 Package pdftex.def Info: Figures/octave_hist.png  used on input line 80.
 (pdftex.def)             Requested size: 265.59494pt x 247.64098pt.
- [5 <./Figures/octave_hist.png>] [6]) [7] [8]
+ [5 <./Figures/octave_hist.png>] [6])
+[7] [8]
 \openout2 = `Body/Pracs/Prac2.aux'.
 
-
-(Body/Pracs/Prac2.tex [9
+ (Body/Pracs/Prac2.tex [9
 
 
 ]
@@ -578,8 +582,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  (Body/Pracs/Prac3.tex [12
 
 
-] [13]) [14]
-[15]
+]
+[13]) [14] [15]
 \openout2 = `Body/Pracs/Prac4.aux'.
 
  (Body/Pracs/Prac4.tex [16
@@ -615,7 +619,7 @@ ul in im-ple-men-ta-tion:
  []
 
 [22]
-<Figures/Prac5_BlockDiagram.png, id=463, 554.07pt x 503.8825pt>
+<Figures/Prac5_BlockDiagram.png, id=465, 554.07pt x 503.8825pt>
 File: Figures/Prac5_BlockDiagram.png Graphic file (type png)
 <use Figures/Prac5_BlockDiagram.png>
 Package pdftex.def Info: Figures/Prac5_BlockDiagram.png  used on input line 79.
@@ -638,13 +642,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 21.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 21.
 Package rerunfilecheck Info: File `Report.out' has not changed.
 (rerunfilecheck)             Checksum: 79D0B73C591954C5A715F343CB1F1880;3788.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 21.
  ) 
 Here is how much of TeX's memory you used:
- 10702 strings out of 481225
- 164160 string characters out of 2914052
+ 10703 strings out of 481225
+ 164171 string characters out of 2914052
  719918 words of memory out of 3000000
- 25798 multiletter control sequences out of 15000+200000
+ 25799 multiletter control sequences out of 15000+200000
  543028 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,15n,71p,731b,2288s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -662,9 +670,9 @@ ts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Report.pdf (27 pages, 661732 bytes).
+Output written on Report.pdf (27 pages, 662427 bytes).
 PDF statistics:
- 639 PDF objects out of 1000 (max. 8388607)
+ 641 PDF objects out of 1000 (max. 8388607)
  236 named destinations out of 1000 (max. 500000)
  424 words of extra memory for PDF output out of 10000 (max. 10000000)
 
