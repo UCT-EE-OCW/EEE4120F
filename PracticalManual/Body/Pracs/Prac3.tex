@@ -34,6 +34,20 @@ If you do want to install Doxygen and see what the produced documentation looks 
 You can find info about Doxygen and the comment types and formatting procedures at \href{https://www.doxygen.nl/index.html}{Doxygen Manual} command. You might want to consider using Doxygen in the course project.
 
 \subsection{Problems}
+
+The file Prac3.cpp provides boilerplate code for an MPI application that incorporates the following operations:
+
+\begin{enumerate}
+	\item Libraries you need to include.
+	\item Use of jpeglib to load a JPEG file that will be split up for processing.
+	\item Putting together a Master process (i.e., which will be called by the MPI process with rank 0) and a Slave process (called by MPI processes with rank 1 and above).
+	\item Reading and writing of a JPEG file (done by the Master).
+	\item Sending messages with data between Master and Slaves, and from Slaves to Master.
+	\item Showing that you can use printf from any node that sends the displayed text back to the Master (a useful hint for getting performance information!). 
+\end{enumerate}
+
+It is up to you though to decide how to partition up and distribute the data between nodes for processing (you want to mention your decision and reasoning for these aspects in your prac report).
+
 \subsubsection{Problem Partitioning}
 Choose a memory partitioning scheme. In your report, explain your partitioning scheme and why you chose it. Do not send the entire dataset to each process, as this is a waste of data. \textbf{[5 marks for describing the partitioning]}
 
@@ -44,7 +58,7 @@ When the slave is finished, it must send the result back to the master. The mast
 Provide snippets of your code in the report (it is important for your code snippets to be suitable commented, the use of comments in your main code repository is not as important for marking but is good practice). \textbf{[5 marks for code]}
 
 \subsubsection{Experimentation}
-Feel free to experiment with different number of processes, although this is not required. It is sufficient to simply get it working. \textbf{[5 marks for experiments]}
+Feel free to experiment with different number of processes (you can do this easily using just one machine with a multi-core CPU and telling mpirun to use more processes using the -np flag), although this is not required in 2021 (obviously if you are not using a cluster and limited to e.g. a single machine having 4 cores you would not be able to get performance improvements using beyond 4 processors because it would have to multitask the processes). It is sufficient to simply get your program working. \textbf{[5 marks for experiments]}
 
 Your report should comment on the time performance though, so make sure you take time measurements. \textbf{[5 marks graphs and display of results]}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.20)  17 APR 2021 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.20)  17 APR 2021 17:30
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -579,10 +579,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 ] [13]) [14]
+[15]
 \openout2 = `Body/Pracs/Prac4.aux'.
 
-
-(Body/Pracs/Prac4.tex [15
+ (Body/Pracs/Prac4.tex [16
 
 
 ]
@@ -590,13 +590,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--57
 []\OT1/cmr/m/n/10.95 Source files are avail-able on the EEE4120F OCW GitHub:
  []
 
-[16] [17]) [18]
+[17] [18]) [19]
 \openout2 = `Body/Pracs/Prac5.aux'.
 
- (Body/Pracs/Prac5.tex [19
+ (Body/Pracs/Prac5.tex [20
 
 
-] [20]
+] [21]
 Underfull \hbox (badness 1454) in paragraph at lines 71--72
 \OT1/cmr/bx/n/10.95 Create a new project called quar-ter-sine \OT1/cmr/m/n/10.9
 5 and im-ple-ment a quar-ter sine wave
@@ -614,19 +614,19 @@ Underfull \hbox (badness 6708) in paragraph at lines 71--72
 ul in im-ple-men-ta-tion:
  []
 
-[21]
-<Figures/Prac5_BlockDiagram.png, id=453, 554.07pt x 503.8825pt>
+[22]
+<Figures/Prac5_BlockDiagram.png, id=463, 554.07pt x 503.8825pt>
 File: Figures/Prac5_BlockDiagram.png Graphic file (type png)
 <use Figures/Prac5_BlockDiagram.png>
 Package pdftex.def Info: Figures/Prac5_BlockDiagram.png  used on input line 79.
 
 (pdftex.def)             Requested size: 265.59494pt x 241.53793pt.
- [22 <./Figures/Prac5_BlockDiagram.png>]
+ [23 <./Figures/Prac5_BlockDiagram.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 94.
- [23]) [24] (Report.bbl)
+ [24]) [25] (Report.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 21.
- [25
+ [26
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 21.
@@ -641,8 +641,8 @@ Package rerunfilecheck Info: File `Report.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 21.
  ) 
 Here is how much of TeX's memory you used:
- 10695 strings out of 481225
- 164111 string characters out of 2914052
+ 10702 strings out of 481225
+ 164160 string characters out of 2914052
  719918 words of memory out of 3000000
  25798 multiletter control sequences out of 15000+200000
  543028 words of font info for 56 fonts, out of 3000000 for 9000
@@ -662,9 +662,9 @@ ts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Report.pdf (26 pages, 659471 bytes).
+Output written on Report.pdf (27 pages, 661732 bytes).
 PDF statistics:
- 628 PDF objects out of 1000 (max. 8388607)
- 229 named destinations out of 1000 (max. 500000)
+ 639 PDF objects out of 1000 (max. 8388607)
+ 236 named destinations out of 1000 (max. 500000)
  424 words of extra memory for PDF output out of 10000 (max. 10000000)
 

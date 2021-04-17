@@ -2,7 +2,7 @@
 // Copyright (C) John-Philip Taylor
 // tyljoh010@myuct.ac.za
 //
-// This file is part of the EEE4084F Course
+// This file is part of the EEE4120F Course
 //
 // This file is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
