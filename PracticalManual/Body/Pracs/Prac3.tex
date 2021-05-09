@@ -1,12 +1,12 @@
 \section{Prac 3 - MPI}
 \label{sec:Prac3}
 \subsection{Overview}
-The focus of this practical is on using message-passing in a distributed memory programming model. The processing algorithm that will be used is a median filter. You can find a tutorial about using of MPI at \href{https://computing.llnl.gov/tutorials/mpi/}{https://computing.llnl.gov/tutorials/mpi/}, but this is much more detailed that what you need for this practical, although you may find some useful tips in that tutorial if you encounter problems in this prac.
+The focus of this practical is message-passing in a distributed memory programming model. The processing algorithm is a median filter will be used. You can find a tutorial at \href{https://computing.llnl.gov/tutorials/mpi/}{https://computing.llnl.gov/tutorials/mpi/}, but this is much more detailed that what you need for this practical.
 
 \subsection{The Programming Model}
-One thing to keep in mind, which is a characteristic of an MPI application, is that each process runs in a completely separate memory-space, possibly on a completed separate platform to where other processes are running.
+One thing to keep in mind is that each process runs in a completely separate memory-space.
 There are no shared memory structures, so any global memory you define is local to each
-instance. The only means of sharing data is through sending and receiving messages (although, of course, there are other methods that can still be used like changes to files in a folder that is shared on the networked).
+instance. The only means of sharing data is through sending and receiving messages.
 Typically MPI is only useful on distributed systems (systems where each node has its own
 memory, and the nodes are connected through some form of network – typically Ethernet).
 Setting up such a system is not trivial, and therefore not included in this practical. For this
@@ -58,13 +58,14 @@ When the slave is finished, it must send the result back to the master. The mast
 Provide snippets of your code in the report (it is important for your code snippets to be suitable commented, the use of comments in your main code repository is not as important for marking but is good practice). \textbf{[5 marks for code]}
 
 \subsubsection{Experimentation}
-Feel free to experiment with different number of processes (you can do this easily using just one machine with a multi-core CPU and telling mpirun to use more processes using the -np flag), although this is not required in 2021 (obviously if you are not using a cluster and limited to e.g. a single machine having 4 cores you would not be able to get performance improvements using beyond 4 processors because it would have to multitask the processes). It is sufficient to simply get your program working. \textbf{[5 marks for experiments]}
+
+Feel free to experiment with diﬀerent number of processes (you can do this easily using just one machine with a multi-core CPU and telling mpirun to use more processes using the -np ﬂag), although this is not required in 2021. Assuming you are not using a cluster, you would be limited to e.g. a single machine having 4 cores; in such a case you would clearly not be able to get performance improvements using beyond 4 processors because it would have to multitask the processes, but this can still be useful for testing the robustness of your coding handing cases beyond the number of physical cores you have available.
+
+Feel free to experiment with different number of processes, although this is not required. It is sufficient to simply get it working. \textbf{[5 marks for experiments]}
 
 Your report should comment on the time performance though, so make sure you take time measurements. \textbf{[5 marks graphs and display of results]}
 
 \subsection{Submission}
-
-Please make sure that you have put the names and students numbers of your prac team into the Prac3.cpp file. This helps facilitate the marking process.
 
 Compile your experiments and findings into an IEEE-style conference paper. 
 The page limit is 3 pages. Submit your paper to the Vula Assignment for this practical.

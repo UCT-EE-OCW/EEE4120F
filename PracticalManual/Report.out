@@ -1,51 +1,12 @@
-\BOOKMARK [1][-]{section.1}{1 Practical 1 - Testing methodologies}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{1.1 Introduction}{section.1}% 2
-\BOOKMARK [3][-]{subsubsection.1.1.1}{1.1.1 Correlation}{subsection.1.1}% 3
-\BOOKMARK [3][-]{subsubsection.1.1.2}{1.1.2 Speed Up}{subsection.1.1}% 4
-\BOOKMARK [3][-]{subsubsection.1.1.3}{1.1.3 Critical Section}{subsection.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.2}{1.2 Requirements}{section.1}% 6
-\BOOKMARK [3][-]{subsubsection.1.2.1}{1.2.1 Measuring Execution Time of rand\(\)}{subsection.1.2}% 7
-\BOOKMARK [3][-]{subsubsection.1.2.2}{1.2.2 White Noise Generator Script}{subsection.1.2}% 8
-\BOOKMARK [3][-]{subsubsection.1.2.3}{1.2.3 Visual Confirmation of Uniform Distribution}{subsection.1.2}% 9
-\BOOKMARK [3][-]{subsubsection.1.2.4}{1.2.4 Timing Execution}{subsection.1.2}% 10
-\BOOKMARK [3][-]{subsubsection.1.2.5}{1.2.5 Implementing Pearson's Correlation}{subsection.1.2}% 11
-\BOOKMARK [3][-]{subsubsection.1.2.6}{1.2.6 Comparing Your Correlation Function to Octave}{subsection.1.2}% 12
-\BOOKMARK [3][-]{subsubsection.1.2.7}{1.2.7 Correlation of Shifted Signals}{subsection.1.2}% 13
-\BOOKMARK [2][-]{subsection.1.3}{1.3 Submission}{section.1}% 14
-\BOOKMARK [2][-]{subsection.1.4}{1.4 Marking}{section.1}% 15
-\BOOKMARK [1][-]{section.2}{2 Prac 2 - OpenCL}{}% 16
-\BOOKMARK [2][-]{subsection.2.1}{2.1 Introduction}{section.2}% 17
-\BOOKMARK [2][-]{subsection.2.2}{2.2 Requirements}{section.2}% 18
-\BOOKMARK [2][-]{subsection.2.3}{2.3 The Programming Model}{section.2}% 19
-\BOOKMARK [2][-]{subsection.2.4}{2.4 Tasks}{section.2}% 20
-\BOOKMARK [3][-]{subsubsection.2.4.1}{2.4.1 Speed-up}{subsection.2.4}% 21
-\BOOKMARK [3][-]{subsubsection.2.4.2}{2.4.2 Data Transfer Overhead}{subsection.2.4}% 22
-\BOOKMARK [2][-]{subsection.2.5}{2.5 Submission}{section.2}% 23
-\BOOKMARK [2][-]{subsection.2.6}{2.6 Marks}{section.2}% 24
-\BOOKMARK [1][-]{section.3}{3 Prac 3 - MPI}{}% 25
-\BOOKMARK [2][-]{subsection.3.1}{3.1 Overview}{section.3}% 26
-\BOOKMARK [2][-]{subsection.3.2}{3.2 The Programming Model}{section.3}% 27
-\BOOKMARK [3][-]{subsubsection.3.2.1}{3.2.1 MPI Commands}{subsection.3.2}% 28
-\BOOKMARK [3][-]{subsubsection.3.2.2}{3.2.2 Using Doxygen}{subsection.3.2}% 29
-\BOOKMARK [2][-]{subsection.3.3}{3.3 Problems}{section.3}% 30
-\BOOKMARK [3][-]{subsubsection.3.3.1}{3.3.1 Problem Partitioning}{subsection.3.3}% 31
-\BOOKMARK [3][-]{subsubsection.3.3.2}{3.3.2 Experimentation}{subsection.3.3}% 32
-\BOOKMARK [2][-]{subsection.3.4}{3.4 Submission}{section.3}% 33
-\BOOKMARK [2][-]{subsection.3.5}{3.5 Marking}{section.3}% 34
-\BOOKMARK [1][-]{section.4}{4 Prac 4 - FPGA Introduction}{}% 35
-\BOOKMARK [2][-]{subsection.4.1}{4.1 Introduction}{section.4}% 36
-\BOOKMARK [2][-]{subsection.4.2}{4.2 Tutorial}{section.4}% 37
-\BOOKMARK [2][-]{subsection.4.3}{4.3 Practical}{section.4}% 38
-\BOOKMARK [3][-]{subsubsection.4.3.1}{4.3.1 Introduction}{subsection.4.3}% 39
-\BOOKMARK [3][-]{subsubsection.4.3.2}{4.3.2 Given Modules}{subsection.4.3}% 40
-\BOOKMARK [3][-]{subsubsection.4.3.3}{4.3.3 Requirements}{subsection.4.3}% 41
-\BOOKMARK [2][-]{subsection.4.4}{4.4 Mark Allocations}{section.4}% 42
-\BOOKMARK [1][-]{section.5}{5 Prac 5 - Vivado IP and Resource Usage}{}% 43
-\BOOKMARK [2][-]{subsection.5.1}{5.1 Tutorial}{section.5}% 44
-\BOOKMARK [3][-]{subsubsection.5.1.1}{5.1.1 Resource usage}{subsection.5.1}% 45
-\BOOKMARK [3][-]{subsubsection.5.1.2}{5.1.2 Vivado IP}{subsection.5.1}% 46
-\BOOKMARK [2][-]{subsection.5.2}{5.2 Practical}{section.5}% 47
-\BOOKMARK [3][-]{subsubsection.5.2.1}{5.2.1 Provided files}{subsection.5.2}% 48
-\BOOKMARK [3][-]{subsubsection.5.2.2}{5.2.2 Creating a waveform generator}{subsection.5.2}% 49
-\BOOKMARK [2][-]{subsection.5.3}{5.3 Create a simple major arpeggiator}{section.5}% 50
-\BOOKMARK [2][-]{subsection.5.4}{5.4 Hand In}{section.5}% 51
+\BOOKMARK [1][-]{section.1}{I Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{II Methodology}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{II-A Hardware}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{II-B Implementation}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{II-C Experiment Procedure}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{III Results}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{III-A Figures}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{III-B Tables}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.3}{III-C Pictures and Screen-shots}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.4}{III-D Maths}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{IV Conclusion}{}% 11
+\BOOKMARK [1][-]{section*.1}{References}{}% 12
