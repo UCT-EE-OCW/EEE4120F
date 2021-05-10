@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun May  9 11:36:17 2021
+# Process ID: 160719
+# Current directory: /home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.sim/sim_1/behav/xsim/xsim.dir/testBench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.sim/sim_1/behav/xsim/xsim.dir/testBench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.sim/sim_1/behav/xsim/xsim.dir/testBench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun May  9 11:36:22 2021. For additional details about this file, please refer to the WebTalk help file at /home/chris/hardDrive/FPGA_Vivado/Vivado/2020.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun May  9 11:36:22 2021...

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun May  9 11:37:53 2021
+# Process ID: 161197
+# Current directory: /home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.sim/sim_1/behav/xsim/xsim.dir/testBench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.sim/sim_1/behav/xsim/xsim.dir/testBench_behav/webtalk/xsim_webtalk.tcl -notrace

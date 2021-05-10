@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.srcs/sources_1/new/sine_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.srcs/sim_1/new/testBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testBench
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/chris/hardDrive/work/tutoring/EEE4120f_2021/gitPracs/EEE4120F/Prac4/Prac4_2_Code/prac4_2_code.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

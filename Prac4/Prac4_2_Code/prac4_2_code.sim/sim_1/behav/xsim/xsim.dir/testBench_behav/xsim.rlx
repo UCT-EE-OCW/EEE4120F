@@ -1,0 +1,12 @@
+
+{ 
+    crc :  1361616137298473301  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto d54059d818e440298427d49febbac433 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testBench_behav xil_defaultlib.testBench xil_defaultlib.glbl" , 
+    buildDate : "Nov 18 2020" , 
+    buildTime : "09:20:35" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/testBench_behav/xsimk\"   \"xsim.dir/testBench_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/testBench_behav/obj/xsim_1.lnx64.o\" -L\"/home/chris/hardDrive/FPGA_Vivado/Vivado/2020.2/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
