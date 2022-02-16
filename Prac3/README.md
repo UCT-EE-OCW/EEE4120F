@@ -1,6 +1,6 @@
 # EEE4120F Prac 3
 
-This practical is split up into two section, practical 3.1 FPGA simulation introduction and practical 4.2 FPGA Verilog. The simulation introduction covers installing and the basics of Vivado. Whilst, the Verilog section delves into debugging and creating your own module.
+This practical is split up into two section, practical 3.1 FPGA simulation introduction and practical 3.2 FPGA Verilog. The simulation introduction covers installing and the basics of Vivado. Whilst, the Verilog section delves into debugging and creating your own module.
 
 _Title:_
 ## Simulation-based Intro to IP Core Integration Using Xilinx Vivado
