@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.3 (64-bit)
+# SW Build 3173277 on Wed Apr  7 05:07:21 MDT 2021
+# IP Build 3174024 on Wed Apr  7 23:42:35 MDT 2021
+# Start of session at: Wed Feb 16 09:14:13 2022
+# Process ID: 52370
+# Current directory: /home/chris/hardDrive/work/tutoring/HPES TAing 2022/newGit/EEE4120F/Prac3/Prac3_2_Code/prac3_2_code.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/chris/hardDrive/work/tutoring/HPES TAing 2022/newGit/EEE4120F/Prac3/Prac3_2_Code/prac3_2_code.sim/sim_1/behav/xsim/xsim.dir/testBench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/chris/hardDrive/work/tutoring/HPES TAing 2022/newGit/EEE4120F/Prac3/Prac3_2_Code/prac3_2_code.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/chris/hardDrive/work/tutoring/HPES TAing 2022/newGit/EEE4120F/Prac3/Prac3_2_Code/prac3_2_code.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/chris/hardDrive/work/tutoring/HPES -notrace

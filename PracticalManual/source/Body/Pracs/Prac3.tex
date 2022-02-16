@@ -1,0 +1,163 @@
+
+\section{Prac 3}
+This practical is split up into two section, practical 3.1 FPGA simulation introduction and practical 3.2 FPGA Verilog. The simulation introduction covers installing and the basics of Vivado. Whilst, the Verilog section delves into debugging and creating your own module.
+\label{sec:Prac3}
+
+\subsection{Prac 3.1 - FPGA Simulation Introduction}
+\subsubsection{Introduction}
+The aim of this practical is to familiarise you with Verilog and Xilinx Vivado. Vivado is a software suite produced by Xilinx, that we will be using to perform simulation and HDL programming suited to FPGA-based development.
+
+For this practical you will be doing a tutorial produced by Xilinx to provide you with knowledge of all the main tools and development procedures that are used in the programming and testing of FPGAs. This knowledge is needed for you to complete Prac 3.2 and the YODA project.
+
+Please note that this practical serves as a prelude to practical 3.2; and will count for 10\% of your total practical 3 mark and should be completed individually. The reason for doing this individually is so that you can proceed through the tasks at your own pace, and understand them thoroughly rather than relying on a teammate to be responsible for the programming and testing activities.
+
+\subsubsection{Required Resources}
+
+In order to run the tutorial you will need to have an installation of Vivado please refer the the following site \href{http://wiki.ee.uct.ac.za/Xilinx_Vivado}{Xilinx Vivado}, in order to do so. If you need remote access to a serve with Vivado already installed, you can request a login for this.
+
+Once you have a working installation of Vivado, you can download the tutorial here \href{https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_1/ug937-vivado-design-suite-simulation-tutorial.pdf}{Vivado Tutorial}.
+
+The practical files can then be downloaded from this link, \href{https://www.xilinx.com/member/forms/download/design-license.html?cid=16f763e2-d450-4d78-ad1a-a68479efa5ac&filename=ug937-design-files.zip}{practical resources}. Please note you will have to login with your Xilinx account to download this file.
+
+Currently, Vivado is compatible with numerous OS’s including Ubuntu and Windows 10. The tutorial does not explicitly include issues relating to specifications of the software and hardware requirements; but the practical should run fine on either of these mentioned operating systems. 
+
+\subsubsection{Practical Instructions}
+For this practical you have to complete Chapters 1 to 3, which is the first 46 pages of the Xilinx Vivado Design Suite Tutorial. Moreover, you will have to make 2 changes from the tutorial so that it falls more in line with this course.
+
+Changes:
+\begin{itemize}
+    \item In Chapter 1, step 1.3: save the project as `practical\_3`, not `project\_xsim`.
+    \item In Chapter 1, step 1.10: install and select Nexys4 DDR, as your board.
+\end{itemize}
+
+The purpose of these changes is to set up the project so that you run the simulation for the FPGA boards used in this course.
+
+\subsubsection{Submission}
+There is no report required for this submission. However, the following files have to be submitted in a single compressed file, named STDNUM\_prac3 (eg HLPCHZ001\_prac3.zip). 
+
+Located in the downloaded practical file: 
+\begin{itemize}
+    \item ./ug937-design-files/sources/sinegen.vhd
+\end{itemize}
+ 
+
+Files generated whilst completing the practical:
+\begin{itemize}
+    \item ./practical\_3/practical\_3.cache
+    \item ./practical\_3/practical\_3.hw
+    \item ./practical\_3/practical\_3.ip\_user\_files
+    \item ./practical\_3/practical\_3.runs
+    \item ./practical\_3/practical\_3.sim
+    \item ./practical\_3/practical\_3.srcs
+    \item ./practical\_3/practical\_3.xpr
+    \item ./practical\_3/tutorial\_1.wcfg
+\end{itemize}
+
+Please do not include practical\_3/practical\_3 .gen.
+
+\subsubsection{Mark Allocations}
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
+\begin{table}[H]
+\centering
+\caption{Prac 3.1 mark allocation}
+\label{tbl:Prac3-Marks}
+\begin{tabular}{|l|l|l|}
+\hline
+{\ul \textbf{Part}} & {\ul \textbf{Includes}} & {\ul \textbf{Marks}} \\ \hline
+\textbf{Files} &  &  \\ \hline
+ & Submission labelled correctly &  1\\ \hline
+ & Correct files submitted &  1\\ \hline
+\textbf{Chapter 2} &  &  \\ \hline
+ & IP cores setup correctly & 3 \\  \hline
+\textbf{Chapter 3} &  &  \\ \hline
+ & Object names correct & 1 \\ \hline
+ & Waveforms & 2 \\ \hline
+ & Groups & 1 \\ \hline
+ & Dividers & 1 \\ \hline
+ & Markers & 1 \\ \hline
+ & Debugged Waveform & 4 \\ \hline
+ & \textbf{TOTAL} & 15 \\ \hline
+\end{tabular}%
+\end{table}
+
+The marks schema table is separated into the files that you provide, essentially a mark for having produced the needed files. Chapter 2 involves just setting up the needed IP core and marks for that. Chapter 3 involved a sequence of tasks which are allocated marks according to the effort concerned for completing these.
+
+\newpage
+
+\subsection{Prac 3.2 - FPGA Verilog}
+For this practical the aim is to debug and create your own modules for an FPGA board using verilog (although you can just do everything in simulation, a physical board is not needed). The practical should be completed in pairs, with only one group member submitting a report. The module you will be creating is a amplitude and phase shifting module, that is given an input as a sine wave and imposes an amplitude and phase shift on it. Moreover, you will be editing a sine wave module so that the values are called from BRAM that you setup.
+
+Source files are available on the EEE4120F OCW GitHub:\newline \href{https://github.com/UCT-EE-OCW/EEE4120F-Pracs}{https://github.com/UCT-EE-OCW/EEE4120F-Pracs}.
+
+
+\subsubsection{Given Modules}
+\begin{enumerate}
+    \item Sine Generation:\\
+    The module called `sine\_gen.v', reads sine values from a the memory file `sine\_LUT\_values.mem' and outputs one sine values per clock cycle.
+    \item sine LUT values:\\
+     The 1024 sine values are stored in a memory file called, `sine\_LUT\_values.mem'.
+    \item Test Bench:\\
+    A test bench module is uses the sine gen module to generate a sine wave at a specific frequency by controlling the clock speed.
+\end{enumerate}
+
+\subsubsection{Requirements}
+For this practical you are required to complete the following three tasks and write up one report covering the three tasks.
+\begin{enumerate}
+    \item Task 1: Edit the frequency\\
+    Currently, the frequency of the sinusoid is 2MHz, when outputted on the test bench. Edit the test bench so that the sine wave frequency is 100MHz. Please include your calculations, code and include a screen shot of the test bench's output.
+    \item Task 2: BRAM\\
+     The given code calls the sinudoids values from a memory file. For this task you have to import the sine values into BRAM and call the data from BRAM instead of from the memory file. A short tutorial is given below on how to create the BRAM IP and initialize it. 
+    \item Task 3: Amplitude and Shifting Module\\
+    Lastly, create a module called `shifter', that's inputs include the clock, shift and sinusoid from the `sine\_gen.v' file. Add this module to the test bench with an amplitude increase of 2 and a phase shift of 90$^{\circ}$. Then display the shifted sinusoid below, the non-shifted sinusoid. Note, that you may have to edit some of the inputs and outputs from the given code.
+\end{enumerate}
+
+
+\subsubsection{Report Requirements}
+For your final report include a section for each task covering all relevant information, including code, explanations and screenshots of the test bench's output. You should also provide an explanation on what BRAM is and provide an in depth critical analysis of the final system. 
+
+\subsubsection{BRAM setup}
+\begin{enumerate}
+    \item Select ``IP Catalogue" on the left hand side of the IDE
+    \item Search ``BRAM".
+    \item Under ``RAMs \& ROMs \& BRAM", select the "Block Memory Generator"
+    \item Select ``Port A Settings"
+    \item Note the write and read width. These relate to the bitwidth of the data in the memory. Change this to 16 for both read and write. We use 16 because the sinusoidal data is in 16 bit hexadecimal values.
+    \item Browse to the Prac 3\_2\_code\textbackslash srcs\textbackslash sources\_1\textbackslash new, and load ``sine\_LUT\_values.coe"
+
+ata is a list of 1024, 16 bit data points.
+    \item The write and read depth relate to how many samples can be stored. Change this to 1024, as out example sine table has 1024 samples, and this we need 1024 addresses.
+    \item Select ``Other Options"
+    \item Select ``Load Init File"
+    \item Browse to the Prac 3\_2\_code\textbackslash srcs\textbackslash sources\_1\textbackslash new, and load ``sine\_LUT\_values.coe"
+    \item Click ``Ok" at the bottom of the dialog
+    \item Click ``Generate" on the next dialog. Press "Ok" when the information dialog shows up.
+    \item In sources view, there will be a template available to instantiate the IP.
+    \item Congrats! You've added a 16-bit 1024 sample Block RAM IP!
+\end{enumerate}
+
+\subsubsection{Rubric}
+\begin{tabular}{|l|l|r|}
+\hline
+\textbf{Aspect} & \textbf{Description} & \multicolumn{1}{l|}{\textbf{Mark Allocation}} \\ \hline
+General & Introduction & 3 \\ \hline
+ & Layout & 2 \\ \hline
+ & Hardware Details & 4 \\ \hline
+Task 1 & Explanation and Calculations & 4 \\ \hline
+ & Clock Speed & 1 \\ \hline
+ & Frequency & 1 \\ \hline
+ & Code & 2 \\ \hline
+ & Screen Shot & 2 \\ \hline
+Task 2 & Explanation on BRAM & 4 \\ \hline
+& Code & 3 \\ \hline
+& Screen Shot & 2 \\ \hline
+Task 3 & Module explanation & 4 \\ \hline
+& Correct Phase Shift & 3 \\ \hline
+& Correct Amplitude Increase & 3 \\ \hline
+& Screen Shot & 2 \\ \hline
+& Code & 4 \\ \hline
+& Critical Analysis & 6 \\ \hline
+\textbf{Total} &  & \textbf{50} \\ \hline
+\end{tabular}
