@@ -17,7 +17,7 @@ The Blue Lab PCs have all the required packages installed, but if you wish to ru
 \begin{itemize}
     \item Nvidia: \href{https://developer.nvidia.com/cuda-toolkit}{https://developer.nvidia.com/cuda-toolkit}
     \item Intel: \href{https://www.intel.com/content/www/us/en/developer/tools/opencl-sdk/choose-download.html}{https://www.intel.com/content/www/us/en/developer/tools/opencl-sdk/choose-download.html}
-    \item AMD: \href{https://developer.amd.com/wordpress/media/2012/10/AMD_APP_SDK_InstallationNotes.pdf}{https://developer.amd.com/wordpress/media/2012/10/AMD_APP_SDK_InstallationNotes.pdf}
+    \item AMD: \href{https://developer.amd.com/wordpress/media/2012/10/AMD_APP_SDK_InstallationNotes.pdf}{https://developer.amd.com/wordpress/media/2012/10/AMD\_APP\_SDK\_InstallationNotes.pdf}
 \end{itemize}
 
 Lastly, all code required to start this practical is on the courses github repository \href{https://github.com/UCT-EE-OCW/EEE4120F}{https://github.com/UCT-EE-OCW/EEE4120F}.
@@ -41,11 +41,12 @@ After compiling and running the platform.cpp program you should get an output si
 \label{fig:platform}
 \end{figure}
 
-Take not of the the `platform number' because you will need this later in the practical.
+Take note of the the `platform number' because you will need this later in the practical.
 
 The following steps will require you to open the main.cpp file and make the appropriate changes. The main.cpp file has sections of code missing which you will have to fill in, these sections are labeled 'TODO code' with the code numbers. Whilst, the manual below will be labeled similarly.
 \subsubsection{Step 1}
 OpenCL is a heterogeneous programming tool, which means you can program on different devices and differing platforms on the host computer. This in turn requires you to select the correct platform for the device you would like to run your program on. In order to select the platform you would like to use the following command is run. 
+
 \begin{lstlisting}
 cl_int clGetPlatformIDs(cl_uint num_entries,
 					cl_platform_id *platforms, 

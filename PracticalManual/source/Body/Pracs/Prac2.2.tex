@@ -1,0 +1,133 @@
+\newpage
+\section{Prac 2.2 - OpenCL Matrix Multiplication}
+\label{sec:Prac2}
+
+\subsection{Introduction}
+
+This practical focuses on  developing an OpenCL kernel, using C++, that you can will load, activate and send data back and forth to, from a C / C++ host application. The focus of this practical is investigating the performance metrics of an OpenCL matrix multiplication implementation and how depending on the type of hardware and algorithms being running performances can vary. Please note that this practical has to be completed in groups of two.
+
+\subsection{Requirements}
+Practical 2.2 is the extension of practical 2.1. In the previous practical we covered all the steps involved in creating your own OpenCL program. In practical 2.2 you will create your own kernels and run the appropriate tests.
+
+The Blue Lab PCs have all the required packages installed, but if you wish to run this practical on your own machine, you will need to install OpenCL as per the instructions on the Wiki - \href{http://wiki.ee.uct.ac.za/OpenCL}{http://wiki.ee.uct.ac.za/OpenCL}. 
+
+\subsection{Programming}
+\subsubsection{Initial Setup}
+For this practical you have to create your own kernels and the appropriate buffers needed to implement these kernels. Skeleton programs multiplication.cpp, kernel.cl, and multiplicationGoldenStandard.cpp have been provided in the github repository. In order for these programs to run you have to fill in all the missing sections. The missing sections are indicated with a TODO comment and you should use practical 2.1 as a reference.
+
+\subsubsection{Skeleton Files}
+The following files can be found in the github repository:
+\begin{enumerate}
+    \item multiplication.cpp: This C++ file includes all the setup and running of the openCL program.
+    \item kernel.cl: Contains the kernel needed to complete this practical.
+    \item multiplicationGoldenStandard.cpp: C++ file where you should implement the golden standard.
+\end{enumerate}
+
+\subsection{Desired Programs}
+Using the given skeleton code you have to implement matrix multiplication. The multiplication.cpp file already includes two functions createKnownSquareMatrix and createRandomSquareMatrix that automatically create square matrices in single 1D arrays. Please note that the dimensions of these matrices are controlled by the variable Size.
+
+\subsubsection{Matrix Multiplication}
+For the kernel you will have to implement matrix multiplication as shown below.
+
+\begin{tabular}{ c c c }
+1 & 2 & 3\\
+1 & 2 & 3\\
+1 & 2 & 3
+\end{tabular}
+X
+\begin{tabular}{ c c c }
+1 & 2 & 3\\
+1 & 2 & 3\\
+1 & 2 & 3
+\end{tabular}
+ = 
+\begin{tabular}{ c c c }
+6 & 12 & 18\\
+6 & 12 & 18\\
+6 & 12 & 18
+\end{tabular}
+
+\subsection{Report}
+After completing the code you will have to run tests to do a report on the practical. In this report you should evaluate the openCL program by running tests that you think apply. If you are unable to get the program running you should still complete the report where you indicate what you think the outcomes for the tests would have been given that the code was working. Please note that marks are given for test results, etc and if your code does not run you will not receive these marks but any explanations will be marked.
+
+\subsubsection{Data Transfer Overhead and Speed-up}
+Speed-up is a concept that was explained in practical 2.1, you should consider looking into the speedup of the OpenCL GPU implementation and include graphs and tables where applicable.
+
+The asynchronous nature of the OpenCL interface makes it difficult to obtain accurate timing information of the various steps of the process. Try to come up with a way to measure the data transfer overhead and processing time separately.
+
+Use this new information to comment on the sources of OpenCL processing delay. Also comment on the speed-up factor achieved when transfer overhead is not taken into account. Does this relate well to the number of threads that are running on the GPU? If not, provide an argument for why this is the case. Do this for large N (pick a value that takes long enough to dominate the transfer overhead, but does not let you finish a whole coffee between runs).
+
+\newpage
+\subsection{Helpful Information}
+This section includes some tips that may be helpful.
+
+\subsubsection{Creating Local Memory on the GPU}
+In practical 2.1 we setup memory blocks globally resulting in no local memory exclusively accessible within work groups. Meaning we did not use any VRAM (Video Random Access Memory) on the GPU and only used the host computers RAM. 
+
+If you would like to setup VRAM for each work group, you do not need to setup any memory buffers as this memory is found on the target device and it is not shared with the host device. Therefore, you just need to indicate in the argument section that such memory block exists, as shown below.
+\begin{lstlisting}
+//NULL is used for the buffer pointer as there 
+//is no memory block on the host computer
+clSetKernelArg(kernel, ArgumentNumber, MemoryBlockSize, NULL); 
+\end{lstlisting}
+
+Then in you kernel you will have to indicate that this argument is a local memory block and not a global memory block, as shown below.
+\begin{lstlisting}
+__kernel void kernel(__global int* globalMemoryBlockPointer,
+            __local int* localMemoryBlockPointer){
+	//Kernel code
+}
+\end{lstlisting}
+
+\subsubsection{Timing}
+If you would like to get accurate run times consider using the clock\_t objects, as shown below.
+
+\begin{lstlisting}
+start = clock(); //start running clock
+\\Some code
+end = clock();
+printf ("Run Time: %0.8f sec \n",((float) end - start)/CLOCKS_PER_SEC);
+\end{lstlisting}
+
+Furthermore, note that the clFinish command acts as a barrier, stopping the program at this point until everything in the queue has been run.
+
+\newpage
+\subsection{Submission}
+Compile your experiments and findings into an IEEE-style conference paper. Make sure you include ALL hardware details, including GPU and CPU clock rates, if available. Of particular importance is the local work group size and number of compute units.
+
+The page limit is 3 pages. Submit your report and code in a zip file to the Vula Assignment for this practical, only one member in the group has to submit. The zipped file should contain the following files:
+\begin{enumerate}
+    \item multiplication.cpp
+    \item multiplicationGoldenStandard.cpp
+    \item OpenCL/Kernel.cl
+    \item Report (`Prac2\_2\_STUDENTNUMBER'.pdf)
+\end{enumerate}
+
+\subsection{Marks}
+
+Note that 33 marks are available, but you will still cannot score a mark above 100\%.
+\begin{table}[H]
+\centering
+\caption{Prac 2 Marking Guide}
+\label{tbl:Prac2Marks}
+\begin{tabular}{|l|l|r|}
+\hline
+\textbf{Aspect} & \textbf{Description} & \multicolumn{1}{l|}{\textbf{Mark Allocation}} \\ \hline
+Code  & & \\ \hline
+ & Buffer Setup & 3 \\ \hline
+ & Kernel & 5 \\ \hline
+ & Timers & 2 \\ \hline
+ & Golden Standard & 3 \\ \hline
+Report & & \\ \hline
+ & Introduction & 3 \\ \hline
+ & Layout/Captions etc & 2 \\ \hline
+ & PC details & 2 \\ \hline
+ & Graphs/Tables * & 6 \\ \hline
+ & Results Comparison & 3 \\ \hline
+ & 3 Metrics reported on & 3 \\ \hline
+ & Overhead discussion & 4 \\ \hline
+ & Discussion & 4 \\ \hline
+
+TOTAL &  & 40 \\ \hline
+\end{tabular}
+\end{table}
