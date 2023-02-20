@@ -68,16 +68,42 @@ int main(void)
 	int Size = 3;
 	int countA = Size*Size;
 	int matrixA[countA];
-	createKnownSquareMatrix(Size,matrixA,displayMatrices);
+	createKnownSquareMatrix(Size,matrixA, false);
+	if(displayMatrices){
+		for(int i = 0; i<Size; i++){
+			for(int j = 0; j<Size; j++){
+					cout<<matrixA[i*Size+j]<<"\t ";
+				
+			}
+			
+			cout<<"\n";
+			
+		}
+	}
 	cout<<"Number of elements in matrix 1: "<<countA<<"\n";
 	cout<<"Dimensions of matrix 1: "<<Size<<"x"<<Size<<"\n";
 	cout<<"Matrix 1 pointer: "<<matrixA<<"\n";
+	
 
 	
 	
 	int countB = Size*Size;
 	int matrixB[countB];
-	createKnownSquareMatrix(Size, matrixB,displayMatrices);
+	createKnownSquareMatrix(Size, matrixB, false);
+	for(int g = 0; g<countB; g++){
+		matrixB[g] = 2*matrixB[g];
+	}
+	if(displayMatrices){
+		for(int i = 0; i<Size; i++){
+			for(int j = 0; j<Size; j++){
+					cout<<matrixB[i*Size+j]<<"\t ";
+				
+			}
+			
+			cout<<"\n";
+			
+		}
+	}
 	cout<<"Number of elements in matrix 2: "<<countB<<"\n";
 	cout<<"Dimensions of matrix 2: "<<Size<<"x"<<Size<<"\n";
 	cout<<"Matrix 2 pointer: "<<matrixB<<"\n";
