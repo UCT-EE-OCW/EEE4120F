@@ -1,12 +1,13 @@
 <div align="center">
-  <img src="./assets/UCT_Logo.png" width="25%" alt="UCT Logo">
-  <br><br>
-
-  <strong style="font-size: 1.4em;">EEE4120F – High Perfomance Embedded Systems(HPES)</strong>
+  <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+    <img src="./assets/UCT_Logo.png" style="width: 20%;">
+    <img src="./assets/HPESLogo.png" style="width: 20%;">
+  </div>
+  <br>
+  <strong style="font-size: 1.4em;">EEE4120F – High Performance Embedded Systems (HPES)</strong>
   <br>
   <span style="font-size: 1.05em;">Department of Electrical Engineering, University of Cape Town</span>
   <br><br>
-
   <div>
     <a href="http://ocw.ee.uct.ac.za/courses/EEE4120F/index.html">
       <img src="https://img.shields.io/badge/Course-Website-blue" alt="Course Website">
