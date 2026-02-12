@@ -8,7 +8,7 @@
   <br><br>
 
   <div>
-    <a href="https://ocw.ee.uct.ac.za/courses/EEE4120">
+    <a href="http://ocw.ee.uct.ac.za/courses/EEE4120F/index.html">
       <img src="https://img.shields.io/badge/Course-Website-blue" alt="Course Website">
     </a>
     <a href="LICENSE">
