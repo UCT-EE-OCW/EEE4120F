@@ -17,6 +17,7 @@ Convolution is a mathematical operation that applies a filter kernel to an image
 The Sobel operator consists of two 3×3 kernels for detecting edges in the horizontal (Gx) and vertical (Gy) directions:
 
 **Sobel Kernel for Horizontal Edges (Gx):**
+
 $$
 G_x = \begin{bmatrix}
 -1 & 0 & +1 \\
@@ -25,7 +26,8 @@ G_x = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-**Sobel Kernel for Vertical Edges (Gy):**
+**Sobel Kernel for Vertical Edges (Gy):**\
+
 $$
 G_y = \begin{bmatrix}
 -1 & -2 & -1 \\
@@ -35,6 +37,7 @@ G_y = \begin{bmatrix}
 $$
 
 The magnitude of edges at each pixel is computed as:
+
 $$
 G = \sqrt{G_x^2 + G_y^2}
 $$
