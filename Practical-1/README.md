@@ -10,7 +10,7 @@ Practical 1 focuses on understanding and implementing 2D convolution, a fundamen
 
 ### 2D Convolution for Edge Detection
 
-Convolution is a mathematical operation that applies a filter kernel to an image to produce outputs like edge detection, blurring, sharpening, etc. In this practical, students implement edge detection using the **Sobel operator**.
+Convolution is a mathematical operation that applies a filter kernel to an image to produce outputs like edge detection, blurring, sharpening, etc. In this practical, you will implement edge detection using the **Sobel operator**.
 
 #### The Sobel Operator
 
